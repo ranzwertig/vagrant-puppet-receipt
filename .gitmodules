@@ -1,0 +1,18 @@
+[submodule "puppet/modules/nodejs"]
+	path = puppet/modules/nodejs
+	url = https://github.com/ranzwertig/puppetlabs-nodejs.git
+[submodule "puppet/modules/apt"]
+	path = puppet/modules/apt
+	url = https://github.com/ranzwertig/puppetlabs-apt.git
+[submodule "puppet/modules/mysql"]
+	path = puppet/modules/mysql
+	url = https://github.com/ranzwertig/puppetlabs-mysql.git
+[submodule "puppet/modules/apache"]
+	path = puppet/modules/apache
+	url = https://github.com/ranzwertig/puppetlabs-apache.git
+[submodule "puppet/modules/php"]
+	path = puppet/modules/php
+	url = https://github.com/ranzwertig/puppet-php.git
+[submodule "puppet/modules/nginx"]
+	path = puppet/modules/nginx
+	url = https://github.com/ranzwertig/puppetlabs-nginx.git
