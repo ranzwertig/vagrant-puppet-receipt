@@ -18,13 +18,8 @@ class apache_web {
     privileges => ['all'] ,
   }
   
-  #php
-  include php::apache2
-  
-  #apache
-  include apache
-  include apache::php
-  
+  include python
+  include nodejs
   
 }
 

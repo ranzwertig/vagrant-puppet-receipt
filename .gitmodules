@@ -7,12 +7,15 @@
 [submodule "puppet/modules/mysql"]
 	path = puppet/modules/mysql
 	url = https://github.com/ranzwertig/puppetlabs-mysql.git
-[submodule "puppet/modules/apache"]
-	path = puppet/modules/apache
-	url = https://github.com/ranzwertig/puppetlabs-apache.git
 [submodule "puppet/modules/php"]
 	path = puppet/modules/php
 	url = https://github.com/ranzwertig/puppet-php.git
 [submodule "puppet/modules/nginx"]
 	path = puppet/modules/nginx
 	url = https://github.com/ranzwertig/puppetlabs-nginx.git
+[submodule "puppet/modules/stdlib"]
+	path = puppet/modules/stdlib
+	url = https://github.com/ranzwertig/puppetlabs-stdlib.git
+[submodule "puppet/modules/python"]
+	path = puppet/modules/python
+	url = https://github.com/ranzwertig/puppet-python.git

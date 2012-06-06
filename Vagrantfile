@@ -17,22 +17,22 @@ Vagrant::Config.run do |config|
   
 end
 
-# apache mysql php instance
+# test instance
 Vagrant::Config.run do |config|
   
-  config.vm.define :apache_web do |apache_web_config|
-    apache_web_config.vm.box = "precise64"
-    apache_web_config.vm.box_url = "http://files.vagrantup.com/precise64.box"
-    apache_web_config.vm.forward_port 80, 8080
-    #apache_web_config.vm.network :bridged
-    apache_web_config.vm.network :hostonly, "192.168.1.13"
-    apache_web_config.vm.customize ["modifyvm", :id, "--memory", "512"]
-    apache_web_config.vm.customize ["modifyvm", :id, "--name", "Apache Web Instance"]
-    apache_web_config.vm.customize ["storagectl", :id, "--name", "SATA Controller", "--hostiocache", "on"]
+  config.vm.define :test do |test_config|
+    test_config.vm.box = "precise64"
+    test_config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+    test_config.vm.forward_port 80, 8080
+    #test_config.vm.network :bridged
+    test_config.vm.network :hostonly, "192.168.1.13"
+    test_config.vm.customize ["modifyvm", :id, "--memory", "512"]
+    test_config.vm.customize ["modifyvm", :id, "--name", "Test Instance"]
+    test_config.vm.customize ["storagectl", :id, "--name", "SATA Controller", "--hostiocache", "on"]
     
-    apache_web_config.vm.provision :puppet do |puppet|
+    test_config.vm.provision :puppet do |puppet|
       puppet.module_path = "puppet/modules"
-      puppet.manifests_path = "puppet/apache_web_manifest"
+      puppet.manifests_path = "puppet/test_manifest"
     end
   end
   
